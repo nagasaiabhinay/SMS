@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:paddingStart="50dp"
+        android:paddingTop="50dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp">
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/more"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:contentDescription="@null"
+            android:elevation="5dp"
+            android:src="@drawable/ic_more"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/home"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_home"
+            app:fabSize="normal"
+            app:layout_constraintCircle="@id/more"
+            app:layout_constraintCircleAngle="0"
+            app:layout_constraintCircleRadius="90dp"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/group"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_group"
+            app:fabSize="normal"
+            app:layout_constraintCircle="@id/more"
+            app:layout_constraintCircleAngle="315"
+            app:layout_constraintCircleRadius="90dp"
+            tools:ignore="MissingConstraints" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/groups"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_groups"
+            app:fabSize="normal"
+            app:layout_constraintCircle="@id/more"
+            app:layout_constraintCircleAngle="270"
+            app:layout_constraintCircleRadius="90dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="167dp"
+            tools:layout_editor_absoluteY="215dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="98dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinputedittext_phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:hint="Enter Phone Number"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/textinputedittext_custommessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout3"
+        android:hint="Enter Message"
+        android:paddingTop="50dp"
+        android:textSize="22dp" />
+
+    <Button
+        android:id="@+id/send_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textinputedittext_custommessage"
+        android:layout_marginTop="42dp"
+        android:gravity="center"
+        android:layout_marginLeft="150dp"
+        android:text="Send"
+        android:textSize="15dp"/>
+
+
+
+
+
+
+
+
+</RelativeLayout>
